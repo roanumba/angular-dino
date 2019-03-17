@@ -8,6 +8,8 @@ import {FormsModule} from "@angular/forms";
 import { HomeComponent } from './home/home.component';
 import { HelloComponent } from './hello/hello.component';
 import { AboutComponent } from './about/about.component';
+import { ComputAndWatchComponent } from './comput-and-watch/comput-and-watch.component';
+import { ClassStyleBindComponent } from './class-style-bind/class-style-bind.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { AboutComponent } from './about/about.component';
     DataAndMethodComponent,
     HomeComponent,
     HelloComponent,
-    AboutComponent
+    AboutComponent,
+    ComputAndWatchComponent,
+    ClassStyleBindComponent
   ],
   imports: [
     BrowserModule,

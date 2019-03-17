@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {DataAndMethodComponent} from "./data-and-method/data-and-method.component";
 import {HomeComponent} from "./home/home.component";
 import {AboutComponent} from "./about/about.component";
+import {ComputAndWatchComponent} from "./comput-and-watch/comput-and-watch.component";
+import {ClassStyleBindComponent} from "./class-style-bind/class-style-bind.component";
 
 const routes: Routes = [
   {
@@ -17,14 +19,14 @@ const routes: Routes = [
               path: 'dataNmethod',
               component: DataAndMethodComponent,
           },
-          // {
-          //     path: '/computeNwatch',
-          //     component: ComputeAndWatch,
-          // },
-          // {
-          //     path: '/classStyleBind',
-          //     component: ClassStyleBind,
-          // },
+          {
+              path: 'computeNwatch',
+              component: ComputAndWatchComponent,
+          },
+          {
+              path: 'classStyleBind',
+              component: ClassStyleBindComponent,
+          },
           // {
           //     path: '/filter',
           //     component: Filters,
