@@ -10,6 +10,13 @@ import { HelloComponent } from './hello/hello.component';
 import { AboutComponent } from './about/about.component';
 import { ComputAndWatchComponent } from './comput-and-watch/comput-and-watch.component';
 import { ClassStyleBindComponent } from './class-style-bind/class-style-bind.component';
+import { FiltersComponent } from './filters/filters.component';
+import { CapitalizePipe } from './filters/capitalize.pipe';
+import { UndercasePipe } from './filters/undercase.pipe';
+import { UrlPipe } from './filters/url.pipe';
+import { DinoComponent } from './dino/dino.component';
+import { DinoCounterComponent } from './dino/dino-count/dino-counter.component';
+import { DynamicComponent } from './dynamic/dynamic.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +26,14 @@ import { ClassStyleBindComponent } from './class-style-bind/class-style-bind.com
     HelloComponent,
     AboutComponent,
     ComputAndWatchComponent,
-    ClassStyleBindComponent
+    ClassStyleBindComponent,
+    FiltersComponent,
+    CapitalizePipe,
+    UndercasePipe,
+    UrlPipe,
+    DinoComponent,
+    DinoCounterComponent,
+    DynamicComponent
   ],
   imports: [
     BrowserModule,
