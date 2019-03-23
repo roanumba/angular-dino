@@ -7,6 +7,7 @@ import {ComputAndWatchComponent} from "./comput-and-watch/comput-and-watch.compo
 import {ClassStyleBindComponent} from "./class-style-bind/class-style-bind.component";
 import {FiltersComponent} from "./filters/filters.component";
 import {DinoComponent} from "./dino/dino.component";
+import {DynamicComponent} from "./dynamic/dynamic.component";
 
 const routes: Routes = [
   {
@@ -37,7 +38,10 @@ const routes: Routes = [
               path: 'dinoComponent',
               component: DinoComponent,
           },
-      
+    {
+        path: 'dynamicComponent',
+        component: DynamicComponent,
+    },
 ];
 
 @NgModule({

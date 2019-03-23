@@ -17,6 +17,7 @@ import { UrlPipe } from './filters/url.pipe';
 import { DinoComponent } from './dino/dino.component';
 import { DinoCounterComponent } from './dino/dino-count/dino-counter.component';
 import { DynamicComponent } from './dynamic/dynamic.component';
+import { MessageComponent } from './dynamic/message.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { DynamicComponent } from './dynamic/dynamic.component';
     UrlPipe,
     DinoComponent,
     DinoCounterComponent,
-    DynamicComponent
+    DynamicComponent,
+    MessageComponent
+
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { DynamicComponent } from './dynamic/dynamic.component';
     AppRoutingModule ,
   ],
   providers: [],
+  entryComponents:[MessageComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

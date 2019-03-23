@@ -14,7 +14,7 @@ import {Observable} from "rxjs";
 })
 export class DinoCounterComponent implements OnInit {
     @Input() name;
-    @Input("initial-quantity") initialQuantity;
+    @Input("initial-quantity") initialQuantity:number;
     @Output() increase = new EventEmitter();
 
     quantity: number = 0;

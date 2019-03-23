@@ -20,8 +20,13 @@ import {NgForm} from "@angular/forms";
     			</li>
     		</ul>
     		<ul>
-    			<li>Total Dinosaurs: {{ totalDinos }} <span>Updated: {{ dinosUpdated }}</span></li>
-    			<li>Total Species:  {{ totalSpecies }} <span>Updated: {{ speciesUpdated }}</span></li>
+    			<li>
+                    Total Dinosaurs: {{ totalDinos }} 
+                    <span>Updated: {{ dinosUpdated }}</span>
+                </li>
+    			<li>Total Species:  {{ totalSpecies }} 
+                    <span>Updated: {{ speciesUpdated }}</span>
+                </li>
     		</ul>
     </div>
   `,
@@ -83,12 +88,16 @@ export class ComputAndWatchComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+      this.computeTotalSpecies();
+      this.computeTotalDinos();
   }
 
 
   title = "Dinosaurs";
   speciesUpdated = 0;
   dinosUpdated = 0;
+    totalDinos=0;
+    totalSpecies=0;
   items = [
       {text: "Tyrannosaurus", quantity: 5},
       {text: "Triceratops", quantity: 3},
@@ -96,9 +105,8 @@ export class ComputAndWatchComponent implements OnInit {
   ];
 
   //computed is a getter
-  get totalDinos() {
+  computeTotalDinos() {
       let sum = 0;
-
 
       this.dinosUpdated += 1;
 
@@ -106,13 +114,14 @@ export class ComputAndWatchComponent implements OnInit {
           sum += i.quantity;
       });
 
-      return sum;
+      this.totalDinos= sum;
   }
 
   //computed is a getter
-  get totalSpecies() {
+    computeTotalSpecies() {
+
       this.speciesUpdated += 1;
-      return this.items.length;
+        this.totalSpecies= this.items.length;
   }
 
   //watching    'input' field
@@ -131,10 +140,12 @@ export class ComputAndWatchComponent implements OnInit {
 
       this.items.push({text: v.inputModel, quantity: 1});
       f.value.inputModel = "";
+      this.computeTotalSpecies();
   }
 
   removeItem(item) {
       this.items.splice(item, 1);
+      this.computeTotalSpecies();
   }
 
 }
